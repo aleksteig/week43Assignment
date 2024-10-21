@@ -155,3 +155,32 @@ isItAHeterogram("orange");
 */
 console.log("Task: E");
 
+function areTheyAnagrams(firstWord, secondWord){
+    let charListOne = [];
+    let charListTwo = [];
+    let countSimilarLetters = 0;
+    if (firstWord.length == secondWord.length){
+        for(i = 0; i < firstWord.length; i++){
+            charListOne.push(firstWord[i]);
+        }
+        for(i = 0; i < secondWord.length; i++){
+            charListTwo.push(secondWord[i]);
+        }
+        charListOne.sort();
+        charListTwo.sort();
+        for(i = 0; i < charListOne.length; i++){
+            if (charListOne[i] == charListTwo[i]){
+                countSimilarLetters += 1;
+            }
+        }
+        if (countSimilarLetters == firstWord.length && secondWord.length){
+            return console.log("true");
+        } else {
+            return console.log("false")
+        }
+    } else {
+        return console.log("false");
+    }
+}
+
+areTheyAnagrams("stolt", "slott")

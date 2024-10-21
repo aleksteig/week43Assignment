@@ -76,7 +76,27 @@ console.log("Task: B");
 function drawArrow(size){
     let spaceBetweenSigns = " ";
     let arrowSign = "*";
+    numberOfColums = 1;
+    numberOfSpaces = 0;
+    while(size > numberOfColums){
+        console.log(arrowSign.repeat(numberOfColums) + spaceBetweenSigns.repeat(numberOfSpaces));
+        numberOfColums += 1;
+        numberOfSpaces += 1;
+    }
+    console.log(arrowSign.repeat(numberOfColums) + spaceBetweenSigns.repeat(numberOfSpaces));
+    if (numberOfColums == size){
+        while (numberOfColums > 0){
+            numberOfColums -= 1;
+            numberOfSpaces -= 1;
+            if(numberOfSpaces >= 0){
+                console.log(arrowSign.repeat(numberOfColums) + spaceBetweenSigns.repeat(numberOfSpaces));
+            }
+            
+        }
+    }
 }
+
+drawArrow(3);
 
 /* -----------------------------------------------------------------------------
     Task: C

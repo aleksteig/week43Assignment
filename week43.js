@@ -110,6 +110,19 @@ drawArrow(3);
 */
 console.log("Task: C");
 
+function drawApproximateSquare(dimension){
+    let corners = "+";
+    let topAndBottomOutput = "-";
+    let emptySpace = " ";
+    let sides = "|";
+    console.log(corners + topAndBottomOutput.repeat(dimension * 2.5) + corners);
+    for(i=0; i<dimension; i++){
+        console.log(sides + emptySpace.repeat(dimension * 2.5) + sides);
+    }
+    console.log(corners + topAndBottomOutput.repeat(dimension * 2.5) + corners);
+}
+
+drawApproximateSquare(4);
 
 
 /* -----------------------------------------------------------------------------

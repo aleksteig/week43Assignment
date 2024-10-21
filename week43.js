@@ -37,18 +37,26 @@ function drawTree(height){
     let numberOfLeaves = 1;
     let spaceBeforeTreeNumber = height;
     let repeatSpace = spaceBeforeTree.repeat(spaceBeforeTreeNumber);
-
-    for(i=0; i < height-1; i++){
-        console.log(spaceBeforeTree.repeat(spaceBeforeTreeNumber) + tree.repeat(numberOfLeaves));
-        if (i < height-2){
-            spaceBeforeTreeNumber -= 1;
-            numberOfLeaves += 2;
+    if (height > 1){
+        for(i=0; i < height-1; i++){
+            console.log(spaceBeforeTree.repeat(spaceBeforeTreeNumber) + tree.repeat(numberOfLeaves));
+            if (i < height-2){
+                spaceBeforeTreeNumber -= 1;
+                numberOfLeaves += 2;
+            }
         }
     }
-    console.log(repeatSpace + "x");
+    if (height == 1){
+        console.log(repeatSpace + "x");
+        console.log("Only the stump remains.")
+    } else if (height > 1){
+        console.log(repeatSpace + "x");
+    } else {
+        console.log("The wind took the tree away.");
+    }
 }
 
-drawTree(7);
+drawTree(0);
 
 
 /* -----------------------------------------------------------------------------
@@ -64,6 +72,11 @@ drawTree(7);
     * 
 */
 console.log("Task: B");
+
+function drawArrow(size){
+    let spaceBetweenSigns = " ";
+    let arrowSign = "*";
+}
 
 /* -----------------------------------------------------------------------------
     Task: C

@@ -131,10 +131,27 @@ drawApproximateSquare(4);
 */
 console.log("Task: D");
 
+function isItAHeterogram(word){
+    let charList = [];
+    for(i = 0; i < word.length; i++){
+        charList.push(word[i]);
+    }
+    if(charList.length == word.length){
+        charList.sort();
+        for(i = 0; i < charList.length; i++){
+            if (charList[i] == charList[i+1]){
+                return console.log("false");
+            }
+        }
+    }
+    return console.log("true");
+}
 
+isItAHeterogram("orange");
 
 /* -----------------------------------------------------------------------------
     Task: E
     Write a function that returns true if two words are Anagrams.
 */
 console.log("Task: E");
+

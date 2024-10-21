@@ -32,8 +32,24 @@ for (let index = 0; index < people.length; index++) {
 console.log("Task: A");
 
 function drawTree(height){
-    
+    let spaceBeforeTree = " ";
+    let tree = "*";
+    let numberOfLeaves = 1;
+    let spaceBeforeTreeNumber = height;
+    let repeatSpace = spaceBeforeTree.repeat(spaceBeforeTreeNumber);
+
+    for(i=0; i < height-1; i++){
+        console.log(spaceBeforeTree.repeat(spaceBeforeTreeNumber) + tree.repeat(numberOfLeaves));
+        if (i < height-2){
+            spaceBeforeTreeNumber -= 1;
+            numberOfLeaves += 2;
+        }
+    }
+    console.log(repeatSpace + "x");
 }
+
+drawTree(7);
+
 
 /* -----------------------------------------------------------------------------
     Task: B
